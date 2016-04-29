@@ -1,20 +1,10 @@
-Community
-============
-Server Status now has a community forum open to everyone. https://www.pilabs.io/forum/
 
 ServerStatus
 ============
 
+This fork is made from [Mojeda GitHub](https://github.com/mojeda/ServerStatus) after making some changes
+
 ServerStatus is based off [BlueVM's](http://uptime.bluevm.com/) Uptime Checker script, [original download and information](http://www.lowendtalk.com/discussion/comment/169690#Comment_169690).
-
-It uses Bootstrap for theming and progress bars.
-
-You can currently see Load, RAM (free), HDD (free) statistics, and if it is online or not.
-
-Screenshot
-============
-![Screenshot](http://www.mojeda.com/wp/wp-content/2013/04/serverupbigthemes.png)
-![Mobile Screenshot](http://www.mojeda.com/wp/wp-content/2013/04/serverupthemes.png)
 
 Installation
 ============
@@ -32,7 +22,6 @@ Installation
 
 Requirements
 ============
-
 **Remote Servers**:
 * PHP5, currently php_exec needs to be enabled in order to get the uptime.
 * Web Server (lighttpd, apache2, nginx, etc.)
