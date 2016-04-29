@@ -1,8 +1,8 @@
 <?php
 
 $host = 'localhost';
-$user = 'serverstatus';
-$pass = 's3rv3rSt4tUs';
+$user = '';
+$pass = '';
 $data = 'status';
 $sSetting['refresh'] = "10000";
 
