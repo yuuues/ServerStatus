@@ -16,7 +16,7 @@
         <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
-                    <a class="brand" href="#">ArrayZone Estado de Servicios</a>
+                    <a class="brand" href="#">Estado de Servicios</a>
                 </div>
             </div>
         </div>
@@ -43,7 +43,7 @@
         </div>
 
         <div class="container">
-            <p style="text-align: center; font-size: 10px;">ServerStatus on KCSystem Servers</p>
+            <p style="text-align: center; font-size: 10px;">ServerStatus</p>
         </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
