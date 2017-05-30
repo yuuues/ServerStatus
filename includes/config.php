@@ -1,14 +1,14 @@
 <?php
+    $host = 'localhost';
+    $user = 'jeffrey';
+    $pass = '1234';
+    $data = 't_ServerStatus';
+    $sSetting['refresh'] = "10000";
 
-$host = 'localhost';
-$user = '';
-$pass = '';
-$data = 'status';
-$sSetting['refresh'] = "10000";
+    mysql_connect($host, $user, $pass) or die(mysql_error());
+    mysql_select_db($data) or die(mysql_error());
 
-mysql_connect($host, $user, $pass) or die(mysql_error());
-mysql_select_db($data) or die(mysql_error());
-//Template options: "default" and "dark"
-$template = "./templates/default/";
-$index = $template . "index.php";
+    // Available: "default" & "dark"
+    $template = "default";
+    $index = "./templates/".$template."/index.php";
 ?>

@@ -2,9 +2,6 @@
 ServerStatus
 ============
 
-This fork is made from [Mojeda GitHub](https://github.com/mojeda/ServerStatus) after making some changes
-
-ServerStatus is based off [BlueVM's](http://uptime.bluevm.com/) Uptime Checker script, [original download and information](http://www.lowendtalk.com/discussion/comment/169690#Comment_169690).
 
 Installation
 ============
@@ -32,3 +29,8 @@ Requirements
 * Web Server (lighttpd, apache2, nginx, etc.)
 * mySQL server unless you choose to use a remote mySQL server.
 # ServerStatus
+
+Requirements
+============
+This fork is made from [Mojeda GitHub](https://github.com/mojeda/ServerStatus) after making some changes
+ServerStatus is based off [BlueVM's](http://uptime.bluevm.com/) Uptime Checker script, [original download and information](http://www.lowendtalk.com/discussion/comment/169690#Comment_169690).
