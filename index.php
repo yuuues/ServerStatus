@@ -1,20 +1,20 @@
 <?php
-include('./includes/config.php');
-global $sJavascript, $sTable;
+    include('./includes/config.php');
+    //global $sJavascript, $sTable;
 
-$query = mysql_query("SELECT * FROM servers ORDER BY id") or die(mysql_error());
-	$sJavascript .= '<script type="text/javascript">
+    $query = mysql_query("SELECT * FROM servers ORDER BY id") or die(mysql_error());
+    $sJavascript .= '<script type="text/javascript">
 		function uptime() {
 			$(function() {';
-while($result = mysql_fetch_array($query)){
-	$sJavascript .= '$.getJSON("pull/index.php?url='.$result["id"].'",function(result){
-	$("#online'.$result["id"].'").html(result.online);
-	$("#uptime'.$result["id"].'").html(result.uptime);
-	$("#load'.$result["id"].'").html(result.load);
-	$("#memory'.$result["id"].'").html(result.memory);
-	$("#hdd'.$result["id"].'").html(result.hdd);
+    while ($result = mysql_fetch_array($query)) {
+        $sJavascript .= '$.getJSON("pull/index.php?url='.$result["id"].'",function(result){
+            $("#online'.$result["id"].'").html(result.online);
+            $("#uptime'.$result["id"].'").html(result.uptime);
+            $("#load'.$result["id"].'").html(result.load);
+            $("#memory'.$result["id"].'").html(result.memory);
+            $("#hdd'.$result["id"].'").html(result.hdd);
 	});';
-	$sTable .= '
+        $sTable .= '
 		<tr>
 			<td id="online'.$result["id"].'">
 				<div class="progress">
@@ -27,15 +27,15 @@ while($result = mysql_fetch_array($query)){
 			<td>'.$result["location"].'</td>
 			<td id="uptime'.$result["id"].'">n/a</td>
 			<td id="load'.$result["id"].'">n/a</td>
-		</tr>
-	';
-}
-	$sJavascript .= '});
+                        <td id="memory'.$result["id"].'">-</td>
+			<td id="hdd'.$result["id"].'">-</td>
+		</tr>';
+    }
+    $sJavascript .= '});
 	}
 	uptime();
 	setInterval(uptime, '.$sSetting['refresh'].');
 	</script>';
 
-include($index);
-
+    include('view/index.php');
 ?>

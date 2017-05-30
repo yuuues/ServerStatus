@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ArrayZone Estado de Servicios</title>
+        <title>KCSystem | Estado de Servicios</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link href="<?php echo $template; ?>css/custom.css" rel="stylesheet">
+        <link href="templates/<?php echo $template; ?>/css/custom.css" rel="stylesheet">
         <style>
             body { padding-top: 60px; }
             @media (max-width: 979px) {
@@ -43,7 +43,7 @@
         </div>
 
         <div class="container">
-            <p style="text-align: center; font-size: 10px;">ServerStatus</p>
+            <p style="text-align: center; font-size: 10px;">KCSystem <a href="">ServerStatus</a></p>
         </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
