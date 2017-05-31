@@ -25,3 +25,7 @@ body { background: #222222 url('../img/bg.png'); color: #fff; }
 	#location, tr td:nth-child(5)		{ display:none; visibility:hidden; }
 	#uptime, tr td:nth-child(6)			{ display:none; visibility:hidden; }
 }
+.right{float: right!important;}
+.reload:hover{
+    cursor:pointer;
+}

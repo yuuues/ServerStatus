@@ -4,6 +4,7 @@
         <title>KCSystem | Estado de Servicios</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
         <link href="templates/<?php echo $template; ?>/css/custom.css" rel="stylesheet">
         <style>
             body { padding-top: 60px; }
@@ -17,8 +18,10 @@
             <div class="navbar-inner">
                 <div class="container">
                     <a class="brand" href="#">Estado de Servicios</a>
+                    <span class="brand right"><span id="timer">0</span> <span id="reload" class="lnr lnr-sync reload"></span></span>
                 </div>
             </div>
+
         </div>
 
         <div class="container content">
