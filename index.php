@@ -33,8 +33,33 @@
     }
     $sJavascript .= '});
 	}
-	uptime();
-	setInterval(uptime, '.$sSetting['refresh'].');
+
+        //setInterval(uptime, '.$sSetting['refresh'].');
+
+        var timer;
+        function mynumber(){
+            if (Number($("#timer").html()) == 0){
+               $("#timer").html("'.($sSetting['refresh'] / 1000).'");
+               uptime();
+            }
+            $("#timer").html(Number($("#timer").html()) - 1);
+        }
+        function Reloader(){
+            timer = setInterval(mynumber, 1000);
+        }
+        function clearReloader(){
+            clearInterval(timer);
+            Reloader();
+            uptime();
+            $("#timer").html("'.($sSetting['refresh'] / 1000).'");
+        }
+        $(function(){
+
+            $("#reload").click(function(){
+                clearReloader();
+            });
+        });
+        Reloader();
 	</script>';
 
     include('view/index.php');
