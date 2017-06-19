@@ -34,12 +34,12 @@
     $sJavascript .= '});
 	}
 
-        //setInterval(uptime, '.$sSetting['refresh'].');
+        //setInterval(uptime, '.$serverStatus['refresh'].');
 
         var timer;
         function mynumber(){
             if (Number($("#timer").html()) == 0){
-               $("#timer").html("'.($sSetting['refresh'] / 1000).'");
+               $("#timer").html("'.($serverStatus['refresh'] / 1000).'");
                uptime();
             }
             $("#timer").html(Number($("#timer").html()) - 1);
@@ -51,7 +51,7 @@
             clearInterval(timer);
             Reloader();
             uptime();
-            $("#timer").html("'.($sSetting['refresh'] / 1000).'");
+            $("#timer").html("'.($serverStatus['refresh'] / 1000).'");
         }
         $(function(){
 
