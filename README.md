@@ -30,7 +30,12 @@ Requirements
 * mySQL server unless you choose to use a remote mySQL server.
 # ServerStatus
 
-Requirements
+Implementing....
+============
+* Admin panel to manage the data of the servers
+* Auto deploy on a server.
+
+Thanks to
 ============
 This fork is made from [Mojeda GitHub](https://github.com/mojeda/ServerStatus) after making some changes
 ServerStatus is based off [BlueVM's](http://uptime.bluevm.com/) Uptime Checker script, [original download and information](http://www.lowendtalk.com/discussion/comment/169690#Comment_169690).
