@@ -1,14 +1,19 @@
 <?php
-    $host = 'localhost';
-    $user = 'jeffrey';
-    $pass = '1234';
-    $data = 't_ServerStatus';
-    $sSetting['refresh'] = "10000"; // 10 sec
+    $db['host'] = 'localhost';
+    $db['user'] = 'jeffrey';
+    $db['pass'] = '1234';
+    $db['data'] = 't_ServerStatus';
 
-    mysql_connect($host, $user, $pass) or die(mysql_error());
-    mysql_select_db($data) or die(mysql_error());
+    mysql_connect($db['host'], $db['user'], $db['pass']) or die(mysql_error());
+    mysql_select_db($db['data']) or die(mysql_error());
 
-    // Available: "default" & "dark"
-    $template = "default";
-    $index = "./templates/".$template."/index.php";
+    $serverStatus = array(
+        'version' => '1.1.1',
+        'refresh' => 10000,
+        // Available: "default" & "dark"
+        'template' => 'default'
+    );
+
+
+    $index = "./templates/".$serverStatus['template']."/index.php";
 ?>
