@@ -50,6 +50,6 @@
         </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-        <?php echo $sJavascript; ?>
+        <?php echo $GLOBALS['sJavascript']; ?>
     </body>
 </html>

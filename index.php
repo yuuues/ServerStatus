@@ -1,12 +1,17 @@
 <?php
-    include('./includes/config.php');
-    //global $sJavascript, $sTable;
+    require_once './vendor/autoload.php';
+    require_once "./admin/lib/_autoload.php";
+    include('./config/ky-config.php');
 
-    $query = mysql_query("SELECT * FROM servers ORDER BY id") or die(mysql_error());
-    $sJavascript .= '<script type="text/javascript">
+    $Server = new Servers($dbo->db);
+    // Inizialise current Server
+    $Server->getServers();
+
+    $sJavascript = '<script type="text/javascript">
 		function uptime() {
 			$(function() {';
-    while ($result = mysql_fetch_array($query)) {
+    $sTable = '';
+    Foreach ($Server->servers as $result) {
         $sJavascript .= '$.getJSON("pull/index.php?url='.$result["id"].'",function(result){
             $("#online'.$result["id"].'").html(result.online);
             $("#uptime'.$result["id"].'").html(result.uptime);
@@ -33,8 +38,6 @@
     }
     $sJavascript .= '});
 	}
-
-        //setInterval(uptime, '.$serverStatus['refresh'].');
 
         var timer;
         function mynumber(){
@@ -63,4 +66,3 @@
 	</script>';
 
     include('view/index.php');
-?>

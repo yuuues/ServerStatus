@@ -1,0 +1,10 @@
+{
+    "require": {
+        "stripe/stripe-php": "4.*",
+        "phpauth/phpauth": "^1.1",
+        "twbs/bootstrap": "3.3.7",
+        "components/jquery": "*",
+        "components/font-awesome": "*",
+        "components/jquery-cookie": "*"
+    }
+}
