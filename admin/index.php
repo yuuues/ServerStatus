@@ -47,6 +47,10 @@
                 }
             ?>
         </div>
+        <div class="container">
+            <p style="text-align: center; font-size: 10px;">KCSystem <a href="https://github.com/Kytoh/ServerStatus">ServerStatus <?php echo $serverStatus['version']; ?></a></p>
+        </div>
+
         <script src="../vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
 <!--        <script src="dist/js/sb-admin-2.js"></script>-->
     </body>

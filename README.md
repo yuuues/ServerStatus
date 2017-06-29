@@ -7,14 +7,9 @@ Installation
 ============
 1. Create a database with a user.
 2. Import the servers.sql file in in the /sql/ folder, to populate the database.
-3. Configure /includes/config.php with the database and user information.
+3. Configure /config/ky-config.php with the database and user information.
 4. Copy uptime.php to any server you want to monitor. This needs to be publicly accessible.
-5. Insert an entry into the database.
-  * name - The name of your server.
-  * url - The URL path to the uptime.php file (minus uptime.php and http://) e.g. dns.domain.tld/path/
-  * location - Server Phisical Location or Datacenter
-  * host - The name of the host of which your server is hosted by or the name of the node where you host the server
-  * type - What type of server is this? DNS, SQL, Apache/nginx, etc.
+5. Enter to /admin and use the credentials: nyah@nyah.com ; 1234
 
 Requirements
 ============
@@ -28,10 +23,34 @@ Requirements
 * Web Server (lighttpd, apache2, nginx, etc.)
 * mySQL server unless you choose to use a remote mySQL server.
 
+ChangeLog
+===========
+2.0.0 **Must be reinstalled**
+* Admin Panel to manage the database info without access the database manually.
+* The frontend has change it database connection to PDO system
+* Used PHPAuth to manage the users and Bootstrap to the Backend
+* Mooved a lot of things.
+
+1.2.0
+* AutoRefrest to 10 seconds
+
+1.1.0
+* Changes on basic performance
+
+1.0.0
+* Forked
+
 Future Developments
 ============
-* Admin Panel to manage the database info without access the database manually.
-* AutoInstall with FTP
+* Deploy on servers connecting with FTP or SSH to remote host
+
+Used Components
+===============
+* jQuery (v1.11.0) - http://jquery.com/
+* Bootstrap (v3.1.1) - http://getbootstrap.com/
+* Bootstrap Form Helper (v2.3.0) - http://bootstrapformhelpers.com/
+* Bootstrap Validator (v0.4.4) - http://bootstrapvalidator.com/
+* PHPAuth (v1.1.1) - https://github.com/PHPAuth/PHPAuth
 
 Credits
 ============
