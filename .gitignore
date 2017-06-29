@@ -1,1 +1,13 @@
+.svn/
+web/protected/runtime/
+web/assets/
 /nbproject/private/
+/nbproject
+/composer.lock
+nbproject/
+.idea/
+vendor
+/vendor/
+\.settings/
+\.buildpath
+\.project

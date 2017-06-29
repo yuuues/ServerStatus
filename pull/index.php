@@ -1,5 +1,9 @@
 <?php
-    include('../includes/config.php');
+    require_once './../vendor/autoload.php';
+    require_once "./../admin/lib/_autoload.php";
+    include('./../config/ky-config.php');
+
+    $Server = new Servers($dbo->db);
 
     function get_data($url)
     {
@@ -12,10 +16,10 @@
         curl_close($ch);
         return $data;
     }
-    $sId = mysql_real_escape_string($_GET['url']);
-    if (is_numeric($sId)) {
-        $data = mysql_query("SELECT * FROM servers WHERE id='$sId'");
-        $result = mysql_fetch_array($data);
+    if (is_numeric($_GET['url'])) {
+        $Server->getServers($_GET['url']);
+        $result = $Server->servers[0];
+
         $url = $result['url']."/uptime.php";
         $output = get_data($url);
         if (($output == NULL) || ($output === false)) {

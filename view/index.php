@@ -46,10 +46,10 @@
         </div>
 
         <div class="container">
-            <p style="text-align: center; font-size: 10px;">KCSystem <a href="">ServerStatus <?php echo $serverStatus['version']; ?></a></p>
+            <p style="text-align: center; font-size: 10px;">KCSystem <a href="https://github.com/Kytoh/ServerStatus">ServerStatus <?php echo $serverStatus['version']; ?></a></p>
         </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-        <?php echo $sJavascript; ?>
+        <?php echo $GLOBALS['sJavascript']; ?>
     </body>
 </html>
