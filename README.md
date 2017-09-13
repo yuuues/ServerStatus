@@ -8,8 +8,9 @@ Installation
 1. Create a database with a user.
 2. Import the servers.sql file in in the /sql/ folder, to populate the database.
 3. Configure /config/ky-config.php with the database and user information.
-4. Copy uptime.php to any server you want to monitor. This needs to be publicly accessible.
-5. Enter to /admin and use the credentials: nyah@nyah.com ; 1234
+4. Execute "composer update" 
+5. Copy uptime.php to any server you want to monitor. This needs to be publicly accessible.
+6. Enter to /admin and use the credentials: nyah@nyah.com ; 1234
 
 Requirements
 ============
