@@ -120,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Volcando datos para la tabla t_ServerStatus.users: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 REPLACE INTO `users` (`id`, `email`, `password`, `isactive`, `dt`) VALUES
-	(1, 'test', '$2y$10$qnKx.R/fd3CecJ0TWmEHderYqth5/EiqpPr2XRasQsTk3KrZB/nUS', 1, '2016-12-29 14:58:40');
+	(1, 'test@test.com', '$2y$10$qnKx.R/fd3CecJ0TWmEHderYqth5/EiqpPr2XRasQsTk3KrZB/nUS', 1, '2016-12-29 14:58:40');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
