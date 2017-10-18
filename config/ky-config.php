@@ -30,10 +30,10 @@
     $dbo = new Database();
 
     $serverStatus = array(
-        'version' => '2.0.0',
+        'version' => '2.1.0',
         'refresh' => 10000,
         // Available: "default" & "dark"
-        'template' => 'default'
+        'template' => 'dark'
     );
 
     $index = "./templates/".$serverStatus['template']."/index.php";

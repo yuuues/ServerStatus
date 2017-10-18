@@ -18,6 +18,7 @@
             $("#load'.$result["id"].'").html(result.load);
             $("#memory'.$result["id"].'").html(result.memory);
             $("#hdd'.$result["id"].'").html(result.hdd);
+            $("#network'.$result["id"].'").html(result.network);
 	});';
         $sTable .= '
 		<tr>
@@ -34,6 +35,7 @@
 			<td id="load'.$result["id"].'">n/a</td>
                         <td id="memory'.$result["id"].'">-</td>
 			<td id="hdd'.$result["id"].'">-</td>
+			<td class="network" id="network'.$result['id'].'">-</td>
 		</tr>';
     }
     $sJavascript .= '});

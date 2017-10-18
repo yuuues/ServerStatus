@@ -18,6 +18,7 @@ Requirements
 * PHP5, currently php_exec needs to be enabled in order to get the uptime.
 * Web Server (lighttpd, apache2, nginx, etc.)
 * You do **NOT** need a database running on the remote servers.
+* If you want network traffic, **vnstat** must be installed
 
 **Master Server**:
 * PHP5 + PHP5_CURL
@@ -26,20 +27,7 @@ Requirements
 
 ChangeLog
 ===========
-2.0.0 **Must be reinstalled**
-* Admin Panel to manage the database info without access the database manually.
-* The frontend has change it database connection to PDO system
-* Used PHPAuth to manage the users and Bootstrap to the Backend
-* Mooved a lot of things.
-
-1.2.0
-* AutoRefrest to 10 seconds
-
-1.1.0
-* Changes on basic performance
-
-1.0.0
-* Forked
+Mooved to a CHANGELOG.md file
 
 Future Developments
 ============
