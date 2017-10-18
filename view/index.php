@@ -37,6 +37,7 @@
                         <th id="load">Load</th>
                         <th id="ram">RAM</th>
                         <th id="hdd">HDD</th>
+                        <th id="network">Network</th>
                     </tr>
                 </thead>
                 <tbody>

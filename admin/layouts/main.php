@@ -32,7 +32,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php">Server Status</a>
+        <a class="navbar-brand" href="index.php">KCSystem | Administrador de Servicios</a>
     </div>
     <!-- /.navbar-header -->
 
@@ -56,3 +56,4 @@
             </ul>
             <!-- /.navbar-top-links -->
         <?php } ?>
+</nav>

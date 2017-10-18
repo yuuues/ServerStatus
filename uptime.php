@@ -1,5 +1,7 @@
 <?php
 
+    $network = false;
+
     function sec2human($time)
     {
         $seconds = $time % 60;
@@ -43,4 +45,10 @@
 
     $load = sys_getloadavg();
     $array['load'] = $load[0];
+
+    // Get the vnstat current network monitor
+    $rx = str_replace("\n","", shell_exec('vnstat -i eth0 | grep "today" | awk \'{print $2" "substr ($3, 1, 1)}\''));
+    $tx = str_replace("\n","", shell_exec('vnstat -i eth0 | grep "today" | awk \'{print $5" "substr ($6, 1, 1)}\''));
+    $tt = str_replace("\n","", shell_exec('vnstat -i eth0 | grep "today" | awk \'{print $8" "substr ($9, 1, 1)}\''));
+    $array['network'] = array('rx' => !empty($rx) ? $rx : '-1', 'tx' => !empty($tx) ? $tx : '-1', 'tt' => !empty($tt) ? $tt : '-1');
     echo json_encode($array);

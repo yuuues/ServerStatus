@@ -39,6 +39,8 @@
 			<div class="bar bar-danger" style="width: 100%;"><small>Down</small></div>
 		</div>
 		';
+            $data['network'] = '<div> - </div>';
+
             echo json_encode($array);
         } else {
             $data = json_decode($output, true);
@@ -75,6 +77,7 @@
             $data['online'] = '<div class = "progress">
             <div class = "bar bar-success" style = "width: 100%;"><small>Up</small></div>
             </div>';
+            $data['network'] = 'rx: '. $data['network']['rx'] .' | tx: '.$data['network']['tx'];
             echo json_encode($data);
         }
     }
