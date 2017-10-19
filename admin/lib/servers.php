@@ -88,6 +88,7 @@
 
                 $query = 'SELECT * FROM '.DB_DATABASE.'.servers k';
                 (!is_null($id)) ? $query .= ' WHERE id = '.$id : null;
+                $query .= ' ORDER BY id DESC';
                 Foreach ($this->db->query($query) as $row) {
                     $this->servers[] = $row;
                 }
