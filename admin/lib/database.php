@@ -50,10 +50,10 @@
                 );
                 $this->db = new PDO($dsn, $this->user, $this->pass, $options);
                 //
+                self::deployAuth();
             } catch (Exception $ex) {
                 $this->error = 'DataBase::'.$ex->getMessage();
             }
-            self::deployAuth();
         }
 
         public function deployAuth()

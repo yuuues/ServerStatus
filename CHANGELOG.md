@@ -1,3 +1,10 @@
+2.1.1 - 23 October 2017 
+    - [MOD][front] - Now the severs will be loaded in DESC order. 
+    - [FIX][admin] - Fixed the admin variable. 
+    - [FIX][admin] - Fixed the API system. 
+    - [FIX][admin] - Fixed the logout query. 
+    - [FIX][admin] - Fixed the deployAuth method. Noow is only loaded when dbo is loaded. 
+
 2.1.0 - October 2017
     
     - [ADD][front] Now it is available to get with VNSTAT the today network use
