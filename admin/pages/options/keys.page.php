@@ -90,19 +90,25 @@
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <i class="fa fa-bar-chart-o fa-fw"></i> Servers
+                    <i class="fa fa-bar-chart-o fa-fw"></i> Servidores Actuales
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
+                    <div class="alert alert-info">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        Atenci&oacute;n: No es posible editar un servidor.
+                    </div>
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover table-striped">
                             <thead>
                                 <tr>
-                                    <th>Server Name</th>
-                                    <th>Server Url</th>
-                                    <th>Server Location</th>
-                                    <th>Server Host</th>
-                                    <th>Server Type</th>
+                                    <th>Nombre del Servidor</th>
+                                    <th>URL del Servidor</th>
+                                    <th>Localización</th>
+                                    <th>ISP</th>
+                                    <th>Servicio Ofrecido</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -128,7 +134,7 @@
 
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <i class="fa fa-bar-chart-o fa-fw"></i> New Server
+                    <i class="fa fa-bar-chart-o fa-fw"></i> A&ntilde;adir nuevo servidor
                     <div class="pull-right">
 
                     </div>
@@ -136,29 +142,24 @@
                 <!-- /.panel-heading -->
                 <div class="panel-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered table-hover table-striped">
-                            <thead>
-                                <tr>
-                                    <th><label for="server_name">Server Name</th>
-                                    <th><label for="server_url">Server URL</th>
-                                    <th><label for="server_location">Server Location</th>
-                                    <th><label for="server_host">Server Host</th>
-                                    <th><label for="server_type">Server Type</label></th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input type="text" id="server_name"></td>
-                                    <td><input type="text" id="server_url"></td>
-                                    <td><input type="text" id="server_location"></td>
-                                    <td><input type="text" id="server_host"></td>
-                                    <td><input type="text" id="server_type"></td>
-                                    <td><button id="createServer" class="btn btn-success btn-block">Create Server</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="form-group col-sm-6">
+                            <label for="server_name">Server Name</label>
+                            <input type="text" class="form-control" id="server_name">
+                        </div><div class="form-group col-sm-6">
+                            <label for="server_url">Server URL</label>
+                            <input type="text" class="form-control" id="server_url">
+                        </div><div class="form-group col-sm-6">
+                            <label for="server_location">Server Location</label>
+                            <input type="text" class="form-control" id="server_location">
+                        </div><div class="form-group col-sm-6">
+                            <label for="server_host">Server Host</label>
+                            <input type="text" class="form-control" id="server_host">
+                        </div><div class="form-group col-sm-6">
+                            <label for="server_type">Server Type</label>
+                            <input type="text" class="form-control" id="server_type">
+                        <div class="clearfix"><br/></div>
                     </div>
+                    <button id="createServer" class="btn btn-success btn-block">Create Server</button>
                     <!-- /.panel-body -->
                 </div>
             </div>

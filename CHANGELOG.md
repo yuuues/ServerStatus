@@ -1,3 +1,8 @@
+2.1.4 - XX October 2017
+
+    - [MOD][admin] - Edit the keys page. Now the "Create new Server" is not a table, is a real form.-
+    - [MOD][admin] - Minor changes
+
 2.1.3 - 24 October 2017
 
     - [NEW][admin] - Now it is posible to view what is the latest version deployed on GitHub and check if an update is required.
