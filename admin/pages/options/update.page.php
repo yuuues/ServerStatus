@@ -9,7 +9,7 @@
         $("#latestVersion").html(latestVersion);
         if(latestVersion != currentVersion){
             $("#NewVersionAvailable").show();
-            $("#NewVersionAvailable a").attr("href", data.browser_download_url);
+            $("#NewVersionAvailable a").attr("href", data.zipball_url);
         }else{
             $("#updated").show();
         }
