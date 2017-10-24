@@ -1,3 +1,9 @@
+2.1.2 - 24 October 2017
+    - [MOD][API] - Reorder the API file removing duplicate code.
+    - [FIX][front] - Now when server does not deliver the traffic info, an "Unknown" bar will appear 
+    - [FIX][front] - Now when server does not deliver the uptime info, an "Unknown" bar will appear 
+    - [FIX][front] - Now when server does not deliver the load info, an "Unknown" bar will appear
+
 2.1.1 - 23 October 2017 
     - [MOD][front] - Now the severs will be loaded in DESC order. 
     - [FIX][admin] - Fixed the admin variable. 
