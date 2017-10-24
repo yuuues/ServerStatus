@@ -39,17 +39,21 @@
                         <!-- /input-group -->
                     </li>
                     <li>
-                        <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        <a href="index.php"><i class="fa fa-dashboard fa-fw"></i>Panel de control</a>
                     </li>
 
                     <li>
-                        <a href="index.php?page=options"><i class="fa fa-files-o fa-fw"></i> Options<span class="fa arrow"></span></a>
+                        <a href="index.php?page=options"><i class="fa fa-files-o fa-fw"></i>Opciones<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="index.php?page=options">Settings</a>
+                                <a href="index.php?page=options&app=update">Actualizador</a>
+                            </li>
+
+                            <li>
+                                <a href="index.php?page=options">Ajustes</a>
                             </li>
                             <li>
-                                <a href="index.php?page=options&app=keys">Servers</a>
+                                <a href="index.php?page=options&app=keys">Servidores</a>
                             </li>
                         </ul>
                     </li>

@@ -24,6 +24,5 @@
      */
 
     if (isset($_POST['email']) && isset($_POST['password'])) {
-        $text_result = $dbo->AuthClass->login($_POST['email'],
-            $_POST['password']);
+        $text_result = $dbo->AuthClass->login($_POST['email'], $_POST['password']);
     }
