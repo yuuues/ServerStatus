@@ -7,7 +7,7 @@
 
 2.1.2 - 24 October 2017
 
-    - [MOD][API] - Reorder the API file removing duplicate code.
+    - [FIX][API] - Reorder the API file removing duplicate code.
     - [FIX][front] - Now when server does not deliver the traffic info, an "Unknown" bar will appear 
     - [FIX][front] - Now when server does not deliver the uptime info, an "Unknown" bar will appear 
     - [FIX][front] - Now when server does not deliver the load info, an "Unknown" bar will appear
@@ -20,7 +20,7 @@
     - [FIX][admin] - Fixed the logout query. 
     - [FIX][admin] - Fixed the deployAuth method. Noow is only loaded when dbo is loaded. 
 
-2.1.0 - October 2017
+2.1.0 - 18 October 2017
 
     - [ADD][front] Now it is available to get with VNSTAT the today network use
     - [ADD][requirement] To view network, vnstat must be installed

@@ -33,7 +33,7 @@
         'version' => '2.1.3',
         'refresh' => 10000,
         // Available: "default" & "dark"
-        'template' => 'dark'
+        'template' => 'default'
     );
 
     $index = "./templates/".$serverStatus['template']."/index.php";
