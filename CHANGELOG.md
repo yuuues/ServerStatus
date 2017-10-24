@@ -1,8 +1,9 @@
 2.1.3 - 24 October 2017
 
-    - [NEW][admin] - Now it is posible to view what is the latest version deployed on GitHub
+    - [NEW][admin] - Now it is posible to view what is the latest version deployed on GitHub and check if an update is required.
     - [FIX][admin] - Fixed the admin variable. 
-    - [FIX][admin] - Fixed the API system. 
+    - [FIX][admin] - Fixed the API system.
+    - [FIX][admin] - Translated to Spanish the entire application. Next would be i18.
 
 2.1.2 - 24 October 2017
 

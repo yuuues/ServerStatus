@@ -1,17 +1,27 @@
-<script src="js/semver-github.min.js"></script>
 <script>
     var gitHubPath = 'Kytoh/ServerStatus';  // example repo
-    var url = 'https://api.github.com/repos/' + gitHubPath + '/tags';
+    var url = 'https://api.github.com/repos/' + gitHubPath + '/releases/latest';
+    var currentVersion = 'v<?php echo $serverStatus['version'] ?>';
 
     $.get(url).done(function (data) {
-        var versions = data.sort(function (v1, v2) {
-            return semver.compare(v2.name, v1.name)
-        });
-        $('#result').html(versions[0].name);
+        $("#checkingNewVersion").hide();
+        latestVersion = data.tag_name;
+        $("#latestVersion").html(latestVersion);
+        if(latestVersion != currentVersion){
+            $("#NewVersionAvailable").show();
+            $("#NewVersionAvailable a").attr("href", data.browser_download_url);
+        }else{
+            $("#updated").show();
+        }
     });</script>
+
 <div id="page-wrapper">
     <div class="row">
-        Ultima versión disponbile: <span id="result"></span><br/>
-        Versión Actuall: <?php echo $serverStatus['version']; ?>
+        <br/>
+        <div class="alert alert-primary" id="checkingNewVersion">Comprobando si hay nuevas versiones...</div>
+        <div class="alert alert-success" id="updated" style="display:none">Ya dispone de la ultima versi&oacute;n disponible</div>
+        <div class="alert alert-warning" id="NewVersionAvailable" style="display:none">Hay disponible una nueva versi&oacute;n<br/>
+            Ultima Versión Disponible: <a href=""><span id="latestVersion"></span></a><br/></div>
+        <div class="alert alert-light">Versión Instalada: v<?php echo $serverStatus['version']; ?></div>
     </div>
 </div>

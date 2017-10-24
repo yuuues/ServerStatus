@@ -32,6 +32,7 @@ Mooved to a CHANGELOG.md file
 Future Developments
 ============
 * Deploy on servers connecting with FTP or SSH to remote host
+* i18 (Currently is only in spanish and hardcoded)
 
 Used Components
 ===============
