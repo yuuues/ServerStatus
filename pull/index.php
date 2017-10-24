@@ -4,6 +4,10 @@
     include('./../config/ky-config.php');
 
     $Server = new Servers($dbo->db);
+    $serverUnknown = '<div class = "progress progress-striped active">
+        <div class = "bar bar-info" style = "width: 100%;"><small>Unknwon</small></div>
+    </div>';
+    $systemDown = '<div class="progress"><div class="bar bar-danger" style="width: 100%;"><small>Down</small></div></div>';
 
     function get_data($url)
     {
@@ -24,26 +28,17 @@
         $output = get_data($url);
         if (($output == NULL) || ($output === false)) {
             $array = array();
-            $array['uptime'] = '
-		<div class="progress">
-			<div class="bar bar-danger" style="width: 100%;"><small>Down</small></div>
-		</div>
-		';
-            $array['load'] = '
-		<div class="progress">
-			<div class="bar bar-danger" style="width: 100%;"><small>Down</small></div>
-		</div>
-		';
-            $array['online'] = '
-		<div class="progress">
-			<div class="bar bar-danger" style="width: 100%;"><small>Down</small></div>
-		</div>
-		';
-            $data['network'] = '<div> - </div>';
+            $array['uptime'] = $systemDown;
+            $array['load'] = $systemDown;
+            $array['online'] = $systemDown;
+            $array['network'] = $systemDown;
 
             echo json_encode($array);
         } else {
             $data = json_decode($output, true);
+            $data['uptime'] = ($data['uptime'] == "0:0:0") ? $serverUnknown : $data['uptime'];
+            $data['load'] = ($data['load'] == "0.00") ? $serverUnknown : $data['load'];
+
             if (0 == $memory = $data['memory']) {
                 $memlevel = null;
             } elseif ($memory >= 51) {
@@ -56,8 +51,7 @@
 
             $data['memory'] = (!is_null($memlevel)) ? '<div class="progress progress-striped active">
 <div class="bar bar-'.$memlevel.'" style="width: '.$memory.'%;">'.$memory.'%</div> </div>'
-                    : '<div class = "progress progress-striped active">
-            <div class = "bar bar-info" style = "width: 100%;">Unknown</div></div>';
+                    : $serverUnknown;
 
             if (0 == $hdd = $data['hdd']) {
                 $hddlevel = null;
@@ -70,14 +64,13 @@
             }
             $data['hdd'] = (!is_null($hddlevel)) ? '<div class="progress progress-striped active">
 <div class="bar bar-'.$hddlevel.'" style="width: '.$hdd.'%;">'.$hdd.'%</div></div>'
-                    : '<div class = "progress progress-striped active">
-            <div class = "bar bar-info" style = "width: 100%;">Unknown</div></div>';
+                    : $serverUnknown;
 
             $data["load"] = number_format($data["load"], 2);
             $data['online'] = '<div class = "progress">
             <div class = "bar bar-success" style = "width: 100%;"><small>Up</small></div>
             </div>';
-            $data['network'] = 'rx: '. $data['network']['rx'] .' | tx: '.$data['network']['tx'];
+            $data['network'] = ($data['network']['tt'] <> -1) ? 'rx: '. $data['network']['rx'] .' | tx: '.$data['network']['tx'] : $serverUnknown;
             echo json_encode($data);
         }
     }

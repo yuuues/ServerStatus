@@ -30,7 +30,7 @@
     $dbo = new Database();
 
     $serverStatus = array(
-        'version' => '2.1.1',
+        'version' => '2.1.2',
         'refresh' => 10000,
         // Available: "default" & "dark"
         'template' => 'dark'
