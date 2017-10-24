@@ -3,7 +3,7 @@
 
     define('DEBUG_MODE', true) or die();
     define('ADMIN_DIR', dirname($_SERVER['REQUEST_URI'])) or die();
-    define('API_DIR', $_SERVER['REQUEST_URI'] .'api/apu.php');
+    define('API_DIR', dirname($_SERVER['REQUEST_URI']) .'/api/apu.php');
     require_once '../vendor/autoload.php';
     require_once "lib/_autoload.php";
     require_once "../config/ky-config.php";

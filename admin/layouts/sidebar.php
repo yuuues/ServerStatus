@@ -46,6 +46,10 @@
                         <a href="index.php?page=options"><i class="fa fa-files-o fa-fw"></i> Options<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
+                                <a href="index.php?page=options&app=update">Servers</a>
+                            </li>
+
+                            <li>
                                 <a href="index.php?page=options">Settings</a>
                             </li>
                             <li>
